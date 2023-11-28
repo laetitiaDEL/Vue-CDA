@@ -15,8 +15,15 @@
         <div class="card text-center">
             <div class="card-footer text-muted">
                 <h5>{{titrePage}}</h5>
+                <label for="titreLivre">Titre</label>
+                <input v-model="titreLivre" type="text" name="titreLivre" id="titreLivre">
+                <label for="auteurLivre">Auteur</label>
+                <input v-model="auteurLivre" type="text" name="auteurLivre" id="auteurLivre">
+                <label for="anneeLivre">Année</label>
+                <input v-model="anneeLivre" type="number" name="anneeLivre" id="anneeLivre">
+                <input v-on:click="ajouterLivre" type="button" name="button" value="Ajouter">
                 <ul>
-                  <li v-for="unLivre in livres">{{unLivre}}</li>
+                  <li v-for="unLivre in livres"><em>{{unLivre.titre}}</em>, {{unLivre.auteur}}, {{unLivre.annee}}.</li>
 
                 </ul>
             </div>
