@@ -4,17 +4,11 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-        tasks: [],
-        valeurDeInput: '',
-        toto:'LOL TOTO'
+        livres: ["Le Hobbit", "Harry Potter et l'Ordre du Phoenix", "Dune"],
+        titrePage: 'Mes Livres'
     };
     },
-    //! Dans cet Object methods, on va écrire nos fonctions
-    methods: {
-        ajouterTask() {
-        this.tasks.push(this.valeurDeInput);
-        this.valeurDeInput = '';
-        },
-    },
+
+
     //! L'application est montée sur la balise HTML qui possède l'id app
     }).mount('#app');
