@@ -8,7 +8,8 @@ Vue.createApp({
         titrePage: 'Mes Livres',
         titreLivre: '',
         auteurLivre: '',
-        anneeLivre: ''
+        anneeLivre: '',
+        random: Math.random()
         };
     },
 

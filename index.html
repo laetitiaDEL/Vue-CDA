@@ -29,6 +29,14 @@
             </div>
         </div>
     </div>
+    <div class="container">
+      <div class="card text-center">
+        <div class="card-footer text-muted">
+          <p v-if="Math.random()>=0.5">{{livres[0].titre}}</p>
+          <p v-else>{{livres[1].titre}}</p>
+        </div>
+      </div>
+    </div>
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>
     <script src="taskList.js"></script>
