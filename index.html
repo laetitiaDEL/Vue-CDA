@@ -14,10 +14,10 @@
     <div class="container">
         <div class="card text-center">
             <div class="card-footer text-muted">              
-              <button v-on:click="moins(scale)" type="button" class="btn btn-danger">-</button>
-              <p>{{nombre}}</p>
-              <button v-on:click="plus(scale)" type="button" class="btn btn-success">+</button>
-              <p>{{userName}}</p>
+              <button v-on:click="plus(1)" type="button" class="btn btn-danger">+1</button>
+              <button v-on:click="plus(5)" type="button" class="btn btn-success">+5</button>
+              <p>le nombre : {{nombre}}</p>
+              <p>{{msg}}</p>
               <p></p>
             </div>
         </div>

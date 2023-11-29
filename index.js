@@ -4,22 +4,11 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-            titre: "Bug",
-            scale: 1,
+            titre: "Réactivité",
             nombre: 0,
-            user: ""
+            user: "",
+            msg: ""
         };
-    },
-
-    computed: {
-        userName(){
-            console.log("fonction executée");
-            if(this.user == ""){
-                return "test";
-            }else{
-                return "un autre test"
-            }
-        }
     },
 
     methods: {
@@ -30,8 +19,27 @@ Vue.createApp({
         moins(scale){
             this.nombre -= scale;
         },
+    },
 
+    watch: {
+        nombre(){
+            if(this.nombre<7){
+                this.msg = "Essaie encore !";
+            }else if(this.nombre == 7){
+                this.msg = "7";
+            }else{
+                this.msg = "Tu as dépassé le nombre mystère.";
+                if(this.nombre > 30){
+                    this.msg = "Beaucoup trop loin...";
+                    setTimeout(() => {
+                        this.nombre = 0;
+                        this.msg = "";
+                    }, "3000");
+                }
+            }
+        }
     }
+
 
 
     //! L'application est montée sur la balise HTML qui possède l'id app
