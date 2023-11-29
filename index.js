@@ -23,3 +23,6 @@ Vue.createApp({
 
     //! L'application est montée sur la balise HTML qui possède l'id app
     }).mount('#app');
+
+
+    
