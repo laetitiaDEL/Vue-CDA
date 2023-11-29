@@ -14,11 +14,11 @@
     <div class="container">
         <div class="card text-center">
             <div class="card-footer text-muted">              
-              <button v-on:click="moins(scale)" type="button" class="btn btn-danger">-</button>
-              <span> Le nombre : {{nombre}}</span>
-              <button v-on:click="plus(scale)" type="button" class="btn btn-success">+</button>
-              <br>
-              <input v-model="scale" type="number">
+              <input v-on:keyup="defP1($event)" type="text">
+              <p>{{p1}}</p>
+              <input v-on:keyup.esc="defP2($event)" type="text">
+              <p>{{p2}}</p>
+              <button v-on:click="alerte()" class="btn btn-success">Alerte</button>
             </div>
         </div>
     </div>

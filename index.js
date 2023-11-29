@@ -4,19 +4,21 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-            titre: "EventBinding - Compteur",
-            scale: 22,
-            nombre: 0
+            titre: "TP-Event Binding",
+            p1: "",
+            p2: ""
         };
     },
 
     methods: {
-        plus(scale){
-            this.nombre += scale;
+        alerte(){
+            alert("T'as tout cassé...");
         },
-
-        moins(scale){
-            this.nombre -= scale;
+        defP1(event){
+            this.p1 = event.target.value;
+        },
+        defP2(event){
+            this.p2 = event.target.value;
         }
     }
 
