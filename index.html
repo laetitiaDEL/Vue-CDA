@@ -9,34 +9,21 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body id="app">
-    <h1 class="text-center">Afficher des variables avec l'interpolation</h1>
+    <h1 class="text-center">{{titre}}</h1>
     
     <div class="container">
         <div class="card text-center">
             <div class="card-footer text-muted">
-                <h5>{{titrePage}}</h5>
-                <label for="titreLivre">Titre</label>
-                <input v-model="titreLivre" type="text" name="titreLivre" id="titreLivre">
-                <label for="auteurLivre">Auteur</label>
-                <input v-model="auteurLivre" type="text" name="auteurLivre" id="auteurLivre">
-                <label for="anneeLivre">Année</label>
-                <input v-model="anneeLivre" type="number" name="anneeLivre" id="anneeLivre">
-                <input v-on:click="ajouterLivre" type="button" name="button" value="Ajouter">
-                <ul>
-                  <li v-for="unLivre in livres"><em>{{unLivre.titre}}</em>, {{unLivre.auteur}}, {{unLivre.annee}}.</li>
-
-                </ul>
+              <img v-bind:src="lien">
+                <h5>{{prenom}}</h5>
+                <input v-model="prenom" type="text">
+                <p>Age : {{age}} ans</p>
+                <p>Age + 10 = {{age10()}}</p>
+                <p>Nb random = {{randomNb()}}</p>
             </div>
         </div>
     </div>
-    <div class="container">
-      <div class="card text-center">
-        <div class="card-footer text-muted">
-          <p v-if="Math.random()>=0.5">{{livres[0].titre}}</p>
-          <p v-else>{{livres[1].titre}}</p>
-        </div>
-      </div>
-    </div>
+
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>
     <script src="taskList.js"></script>

@@ -4,22 +4,20 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-        livres: [{titre: "Le Hobbit", auteur: "J.R.R. Tolkien", annee: 1937}, {titre:"Harry Potter et l'Ordre du Phénix", auteur: "J.K. Rowling", annee: 2003}, {titre: "Dune", auteur: "F. Herbert", annee: 1935}],
-        titrePage: 'Mes Livres',
-        titreLivre: '',
-        auteurLivre: '',
-        anneeLivre: ''
+            titre: "TP DataBinding - Profile User",
+            prenom: "Mario",
+            age: 45,
+            lien: "https://picsum.photos/200"
         };
     },
 
     methods: {
-        ajouterLivre(){
-            let newLivre = {
-                titre: this.titreLivre,
-                auteur: this.auteurLivre,
-                annee: this.anneeLivre
-            };
-            this.livres.push(newLivre);
+        age10(){
+            return this.age +10;
+        },
+
+        randomNb(){
+            return Math.random();
         }
     }
 
