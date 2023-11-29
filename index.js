@@ -5,17 +5,18 @@ Vue.createApp({
     data() {
         return {
             titre: "EventBinding - Compteur",
+            scale: 22,
             nombre: 0
         };
     },
 
     methods: {
-        plus(){
-            this.nombre ++;
+        plus(scale){
+            this.nombre += scale;
         },
 
-        moins(){
-            this.nombre --;
+        moins(scale){
+            this.nombre -= scale;
         }
     }
 

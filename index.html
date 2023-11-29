@@ -14,9 +14,11 @@
     <div class="container">
         <div class="card text-center">
             <div class="card-footer text-muted">              
-              <button v-on:click="moins()" type="button" class="btn btn-danger">-</button>
+              <button v-on:click="moins(scale)" type="button" class="btn btn-danger">-</button>
               <span> Le nombre : {{nombre}}</span>
-              <button v-on:click="plus()" type="button" class="btn btn-success">+</button>
+              <button v-on:click="plus(scale)" type="button" class="btn btn-success">+</button>
+              <br>
+              <input v-model="scale" type="number">
             </div>
         </div>
     </div>
