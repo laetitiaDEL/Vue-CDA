@@ -20,11 +20,9 @@
     <h1 class="text-center">{{titre}}</h1>
     
     <div class="container">
-        <div class="card text-center">
-            <div class="card-footer text-muted">              
-              <div v-on:click="selectionCard(1)" v-bind:class="{class1: selectCard1}"><h2>Card title 1</h2></div>
-              <div v-on:click="selectionCard(2)" v-bind:class="{class2: selectCard2}"><h2>Card title 2</h2></div>
-            </div>
+        <div class="card text-center">        
+            <div v-on:click="selectionCard(1)" v-bind:class="{class1: selectCard1, card: true}"><h2>Card title 1</h2></div>
+            <div v-on:click="selectionCard(2)" v-bind:class="{class2: selectCard2, card: true}"><h2>Card title 2</h2></div>
         </div>
     </div>
 
