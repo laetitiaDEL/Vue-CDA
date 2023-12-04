@@ -23,13 +23,20 @@ Vue.createApp({
     watch: {
         classInput(){
             if(this.classInput == "hello"){
-                this.classHello = !this.classWorld;
+                this.classHello = !this.classHello;
             }
             if(this.classInput == "world"){
                 this.classWorld = !this.classWorld;
             }
         }
+    },
 
+    computed: {
+        setClass(){
+            return {
+            maClasseWorld: this.classWorld ? true : false, maClasseHello: this.classHello ? true : false, maClasseVisible: this.display ? true : false,maClasseHidden: !this.display ? true : false
+            }
+        }
     }
 
 

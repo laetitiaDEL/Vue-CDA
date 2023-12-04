@@ -31,7 +31,7 @@
     <div class="container">
         <div class="card text-center">        
             <input v-model="classInput" type="text">
-            <p v-bind:class="{'maClasseWorld': classWorld? true : false, 'maClasseHello': classHello?true:false, 'maClasseVisible': display?true:false, 'maClasseHidden': !display?true: false}">Hello World (classe dynamique)</p>
+            <p v-bind:class="setClass">Hello World (classe dynamique)</p>
             <input v-model="colorInput" type="text">
             <p v-bind:style="{backgroundColor: colorInput}">Hello World (couleur dynamique)</p>
             <button v-on:click="displayP1()" class="btn btn-primary">Afficher le premier titre</button>
