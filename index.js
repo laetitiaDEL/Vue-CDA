@@ -4,7 +4,7 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-            titre: "Dynamic Style",
+            titre: "Dynamic Style - Classes CSS",
             selectCard1: false,
             selectCard2: false
         };
