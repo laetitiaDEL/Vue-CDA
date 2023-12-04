@@ -4,18 +4,29 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-            titre: "Dynamic Style - Classes CSS",
-            selectCard1: false,
-            selectCard2: false
+            titre: "TP - Dynamic styling",
+            classInput: "",
+            colorInput: "",
+            display: true,
+            classHello: false,
+            classWorld: false,
+            color: false
         };
     },
 
     methods: {
-        selectionCard(uneCard){
-            if(uneCard == 1){
-                this.selectCard1 = !this.selectCard1;
-            }else if(uneCard == 2){
-                this.selectCard2 = !this.selectCard2;
+        displayP1(){
+            this.display = !this.display;
+        }
+    },
+
+    watch: {
+        classInput(){
+            if(this.classInput == "hello"){
+                this.classHello = !this.classWorld;
+            }
+            if(this.classInput == "world"){
+                this.classWorld = !this.classWorld;
             }
         }
 
