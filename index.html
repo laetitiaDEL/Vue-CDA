@@ -14,11 +14,8 @@
     <div class="container">
         <div class="card text-center">
             <div class="card-footer text-muted">              
-              <button v-on:click="plus(1)" type="button" class="btn btn-danger">+1</button>
-              <button v-on:click="plus(5)" type="button" class="btn btn-success">+5</button>
-              <p>le nombre : {{nombre}}</p>
-              <p>{{msg}}</p>
-              <p></p>
+              <div v-on:click="selectionCard(1)" v-bind:style="{ backgroundColor: selectCard1 ? 'red' : 'blue' }" class="card"><h2>Card title 1</h2></div>
+              <div v-on:click="selectionCard(2)" v-bind:style="{backgroundColor: selectCard2 ? 'green' : 'violet'}" class="card"><h2>Card title 2</h2></div>
             </div>
         </div>
     </div>

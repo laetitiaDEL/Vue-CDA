@@ -4,40 +4,29 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-            titre: "Réactivité",
-            nombre: 0,
-            user: "",
-            msg: ""
+            titre: "Dynamic Style",
+            selectCard1: false,
+            selectCard2: false
         };
     },
 
     methods: {
-        plus(scale){
-            this.nombre += scale;
-        },
-
-        moins(scale){
-            this.nombre -= scale;
-        },
-    },
-
-    watch: {
-        nombre(){
-            if(this.nombre<7){
-                this.msg = "Essaie encore !";
-            }else if(this.nombre == 7){
-                this.msg = "7";
-            }else{
-                this.msg = "Tu as dépassé le nombre mystère.";
-                if(this.nombre > 30){
-                    this.msg = "Beaucoup trop loin...";
-                    setTimeout(() => {
-                        this.nombre = 0;
-                        this.msg = "";
-                    }, "3000");
+        selectionCard(uneCard){
+            if(uneCard == 1){
+                if(this.selectCard1 == false){
+                    this.selectCard1 = true;
+                }else{
+                    this.selectCard1 = false;
+                }
+            }else if(uneCard == 2){
+                if(this.selectCard2 == false){
+                    this.selectCard2 = true;
+                }else{
+                    this.selectCard2 = false;
                 }
             }
         }
+
     }
 
 
