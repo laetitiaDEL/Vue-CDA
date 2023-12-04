@@ -13,7 +13,6 @@ Vue.createApp({
     methods: {
         addFilm(){
             this.mesFilms.push(this.nomFilm);
-            console.log(this.mesFilms);
         }
     }
 

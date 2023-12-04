@@ -30,12 +30,18 @@
     
     <div class="container">
         <div class="card text-center">        
-            <h2>WatchList (films à voir)</h2>
+            <h2>WatchList 🎬 (films à voir)</h2>
             <input v-model="nomFilm" type="text">
             <button v-on:click="addFilm()">Ajouter à votre liste</button>
             <h2 v-if="mesFilms.length">{{nomFilm}}</h2>
             <h2 v-else>Pas encore de films dans votre liste</h2>
-        </div>
+        </div>  
+    </div>
+
+    <div class="container">
+        <div v-for="unFilm in mesFilms" class="card text-center">        
+            <div>{{unFilm}}</div>
+        </div>  
     </div>
 
     <!-- script pour contacter VUE -->
