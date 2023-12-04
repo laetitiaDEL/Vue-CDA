@@ -30,11 +30,11 @@
     
     <div class="container">
         <div class="card text-center">        
-            <input v-model="classInput" type="text">
-            <p v-bind:class="setClass">Hello World (classe dynamique)</p>
-            <input v-model="colorInput" type="text">
-            <p v-bind:style="{backgroundColor: colorInput}">Hello World (couleur dynamique)</p>
-            <button v-on:click="displayP1()" class="btn btn-primary">Afficher le premier titre</button>
+            <h2>WatchList (films à voir)</h2>
+            <input v-model="nomFilm" type="text">
+            <button v-on:click="addFilm()">Ajouter à votre liste</button>
+            <h2 v-if="nomFilm != ''">{{nomFilm}}</h2>
+            <h2 v-else>Pas encore de films dans votre liste</h2>
         </div>
     </div>
 

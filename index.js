@@ -4,38 +4,15 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-            titre: "TP - Dynamic styling",
-            classInput: "",
-            colorInput: "",
-            display: true,
-            classHello: false,
-            classWorld: false,
-            color: false
+            titre: "Conditionnal rendering",
+            mesFilms: [],
+            nomFilm: ""
         };
     },
 
     methods: {
-        displayP1(){
-            this.display = !this.display;
-        }
-    },
-
-    watch: {
-        classInput(){
-            if(this.classInput == "hello"){
-                this.classHello = !this.classHello;
-            }
-            if(this.classInput == "world"){
-                this.classWorld = !this.classWorld;
-            }
-        }
-    },
-
-    computed: {
-        setClass(){
-            return {
-            maClasseWorld: this.classWorld ? true : false, maClasseHello: this.classHello ? true : false, maClasseVisible: this.display ? true : false,maClasseHidden: !this.display ? true : false
-            }
+        addFilm(){
+            this.mesFilms.push(this.nomFilm);
         }
     }
 
