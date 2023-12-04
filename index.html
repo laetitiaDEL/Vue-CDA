@@ -33,7 +33,7 @@
             <h2>WatchList (films à voir)</h2>
             <input v-model="nomFilm" type="text">
             <button v-on:click="addFilm()">Ajouter à votre liste</button>
-            <h2 v-if="nomFilm != ''">{{nomFilm}}</h2>
+            <h2 v-if="mesFilms.length">{{nomFilm}}</h2>
             <h2 v-else>Pas encore de films dans votre liste</h2>
         </div>
     </div>
