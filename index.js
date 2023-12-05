@@ -4,19 +4,38 @@ Vue.createApp({
     //! Toutes les data seront contenues dans this
     data() {
         return {
-            titre: "Conditionnal rendering",
-            mesFilms: [],
-            nomFilm: ""
+            titre: "TP - Conditionnal Rendering / List Rendering",
+            maListe: [],
+            textBtn: "Masquer liste",
+            element: "",
+            display: true
         };
     },
 
     methods: {
-        addFilm(){
-            this.mesFilms.push(this.nomFilm);
+        addElem(){
+            this.maListe.push(this.element);
         },
 
         supprFilm(i){
             this.mesFilms.splice(i, 1);
+        },
+
+        displayListe(){
+            this.display = !this.display;
+            if(this.textBtn == "Masquer liste"){
+                this.textBtn = "Afficher liste";
+            }else{
+                this.textBtn = "Masquer liste";
+            }
+        }
+    },
+
+    computed: {
+        setClass(){
+            return {
+             maClasseVisible: this.display ? true : false,maClasseHidden: !this.display ? true : false
+            }
         }
     }
 

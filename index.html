@@ -8,15 +8,6 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <style>
-        .maClasseHello {
-            background-color: steelblue;
-            font-family: Impact;
-            color: beige;
-        }
-        .maClasseWorld {
-            background-color: rgb(200, 0, 255);
-            color: chartreuse;
-        }
         .maClasseHidden {
             display: none;
         }
@@ -30,19 +21,19 @@
     
     <div class="container">
         <div class="card text-center">        
-            <h2>WatchList 🎬 (films à voir)</h2>
-            <input v-model="nomFilm" type="text">
-            <button v-on:click="addFilm()">Ajouter à votre liste</button>
-            <h2 v-if="mesFilms.length">{{nomFilm}}</h2>
-            <h2 v-else>Pas encore de films dans votre liste</h2>
+            <h2>La liste des courses 🧺</h2>
+            <input v-model="element" type="text">
+            <button v-on:click="addElem()" class="btn btn-success">Ajouter à votre liste</button>
         </div>  
     </div>
 
     <div class="container">
-        <ul v-for="(unFilm, unIndex) in mesFilms" class="card text-center">        
-            <li v-on:click="supprFilm(unIndex)">{{unIndex}} : {{unFilm}}</li>
+        <ul class="card text-center" v-bind:class="setClass">        
+            <li v-for="(unElem, unIndex) in maListe" v-on:click="supprElem(unIndex)">{{unElem}}</li>
         </ul>  
+    <button v-on:click="displayListe()" class="btn btn-primary">{{textBtn}}</button>
     </div>
+
 
     <!-- script pour contacter VUE -->
     <script src="https://unpkg.com/vue@next"></script>
