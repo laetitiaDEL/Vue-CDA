@@ -39,9 +39,9 @@
     </div>
 
     <div class="container">
-        <div v-for="unFilm in mesFilms" class="card text-center">        
-            <div>{{unFilm}}</div>
-        </div>  
+        <ul v-for="(unFilm, unIndex) in mesFilms" class="card text-center">        
+            <li>{{unIndex}} : {{unFilm}}</li>
+        </ul>  
     </div>
 
     <!-- script pour contacter VUE -->
