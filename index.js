@@ -13,6 +13,10 @@ Vue.createApp({
     methods: {
         addFilm(){
             this.mesFilms.push(this.nomFilm);
+        },
+
+        supprFilm(i){
+            this.mesFilms.splice(i, 1);
         }
     }
 

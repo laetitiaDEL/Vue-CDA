@@ -40,7 +40,7 @@
 
     <div class="container">
         <ul v-for="(unFilm, unIndex) in mesFilms" class="card text-center">        
-            <li>{{unIndex}} : {{unFilm}}</li>
+            <li v-on:click="supprFilm(unIndex)">{{unIndex}} : {{unFilm}}</li>
         </ul>  
     </div>
 
